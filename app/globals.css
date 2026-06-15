@@ -8,14 +8,15 @@
   --font-display: var(--font-bangers);
   --font-body: var(--font-poppins);
 
+  /* Purple accent palette (replaces saffron/gold) */
   --color-cream: #FFFBF0;
-  --color-parchment: #FFF3D4;
-  --color-saffron: #E8521A;
-  --color-saffron-bright: #FF6B35;
-  --color-gold: #C4922A;
-  --color-gold-light: #F5C842;
-  --color-ink: #1A0A00;
-  --color-maroon: #8B1A1A;
+  --color-parchment: #1A1130;
+  --color-saffron: #a855f7;
+  --color-saffron-bright: #c084fc;
+  --color-gold: #7c3aed;
+  --color-gold-light: #a78bfa;
+  --color-ink: #07080f;
+  --color-maroon: #6d28d9;
   --color-jade: #1A7A4A;
 
   --animate-float:       float 4s ease-in-out infinite;
@@ -43,8 +44,8 @@
   100% { background-position:  200% center; }
 }
 @keyframes pulse-glow {
-  0%,100% { box-shadow: 0 0 20px rgba(232,82,26,.35); }
-  50%     { box-shadow: 0 0 50px rgba(232,82,26,.75), 0 0 100px rgba(196,146,42,.25); }
+  0%,100% { box-shadow: 0 0 20px rgba(168,85,247,.35); }
+  50%     { box-shadow: 0 0 50px rgba(168,85,247,.75), 0 0 100px rgba(124,58,237,.25); }
 }
 @keyframes slide-up {
   from { transform: translateY(36px); opacity: 0; }
@@ -85,27 +86,27 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background-color: #FFFBF0;
-  color: #1A0A00;
+  background-color: #07080f;
+  color: #F8FAFC;
   font-family: var(--font-poppins, sans-serif);
   overflow-x: hidden;
   transition: background-color .3s ease, color .3s ease;
 }
 .dark body {
-  background-color: #0C0818;
-  color: #F5E6CC;
+  background-color: #07080f;
+  color: #F8FAFC;
 }
 
 /* ─── Scrollbar ──────────────────────────────────────────── */
 ::-webkit-scrollbar       { width: 8px; }
-::-webkit-scrollbar-track { background: #FFF3D4; }
-::-webkit-scrollbar-thumb { background: #E8521A; border-radius: 4px; }
-.dark ::-webkit-scrollbar-track { background: #1A1130; }
-.dark ::-webkit-scrollbar-thumb { background: #FF6B35; }
+::-webkit-scrollbar-track { background: #12083a; }
+::-webkit-scrollbar-thumb { background: #a855f7; border-radius: 4px; }
+.dark ::-webkit-scrollbar-track { background: #12083a; }
+.dark ::-webkit-scrollbar-thumb { background: #c084fc; }
 
 /* ─── Utility classes ────────────────────────────────────── */
 .gradient-text {
-  background: linear-gradient(135deg, #E8521A 0%, #C4922A 50%, #FF6B35 100%);
+  background: linear-gradient(135deg, #a855f7 0%, #7c3aed 50%, #c084fc 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -114,12 +115,12 @@ body {
 }
 
 .manga-border {
-  border: 3px solid #1A0A00;
-  box-shadow: 5px 5px 0 #1A0A00;
+  border: 3px solid rgba(168,85,247,.5);
+  box-shadow: 5px 5px 0 rgba(124,58,237,.4);
 }
 .dark .manga-border {
-  border: 3px solid rgba(245,230,204,.5);
-  box-shadow: 5px 5px 0 rgba(232,82,26,.5);
+  border: 3px solid rgba(168,85,247,.5);
+  box-shadow: 5px 5px 0 rgba(168,85,247,.4);
 }
 
 .card-hover {
@@ -127,18 +128,18 @@ body {
 }
 .card-hover:hover {
   transform: translateY(-6px) rotate(-0.5deg);
-  box-shadow: 0 20px 40px rgba(232,82,26,.2);
+  box-shadow: 0 20px 40px rgba(168,85,247,.25);
 }
 .dark .card-hover:hover {
-  box-shadow: 0 20px 40px rgba(255,107,53,.3);
+  box-shadow: 0 20px 40px rgba(168,85,247,.35);
 }
 
 .halftone {
-  background-image: radial-gradient(circle, rgba(232,82,26,.12) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(168,85,247,.12) 1px, transparent 1px);
   background-size: 22px 22px;
 }
 .dark .halftone {
-  background-image: radial-gradient(circle, rgba(255,107,53,.08) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(168,85,247,.08) 1px, transparent 1px);
 }
 
 .speed-lines::before {
@@ -148,13 +149,13 @@ body {
   background-image: repeating-linear-gradient(
     -45deg,
     transparent 0px, transparent 6px,
-    rgba(232,82,26,.04) 6px, rgba(232,82,26,.04) 7px
+    rgba(168,85,247,.04) 6px, rgba(168,85,247,.04) 7px
   );
   pointer-events: none;
 }
 
 .ink-bg {
-  background: linear-gradient(135deg, #E8521A, #C4922A, #8B1A1A);
+  background: linear-gradient(135deg, #a855f7, #7c3aed, #6d28d9);
   background-size: 200% 200%;
   animation: gradient-shift 5s ease infinite;
 }
@@ -162,7 +163,7 @@ body {
 .glow-ring {
   position: absolute;
   border-radius: 50%;
-  border: 2px solid rgba(232,82,26,.4);
+  border: 2px solid rgba(168,85,247,.4);
   animation: ping-ring 2s cubic-bezier(0,0,.2,1) infinite;
 }
 

@@ -12,7 +12,7 @@ export default function StatsSection() {
   const { user, openDialog } = useAuth();
 
   return (
-    <section className="py-20 md:py-28 relative overflow-hidden bg-ink dark:bg-[#07040F]">
+    <section className="py-20 md:py-28 relative overflow-hidden bg-[#07040F]">
       <div className="absolute inset-0 halftone opacity-20 pointer-events-none" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-saffron/15 blur-3xl rounded-full pointer-events-none" />
       <div className="absolute inset-0 overflow-hidden pointer-events-none">

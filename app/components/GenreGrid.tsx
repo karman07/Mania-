@@ -22,7 +22,7 @@ export default function GenreGrid() {
   const { t } = useLanguage();
 
   return (
-    <section id="genres" className="py-20 md:py-28 bg-cream dark:bg-[#0C0818] relative overflow-hidden">
+    <section id="genres" className="py-20 md:py-28 bg-[#0c0918] relative overflow-hidden">
       <div className="absolute bottom-0 left-0 w-[350px] h-[350px] rounded-full bg-saffron/6 dark:bg-saffron/3 blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -48,15 +48,15 @@ export default function GenreGrid() {
               <Link
                 key={i}
                 href={`/browse?genre=${slug}`}
-                className={`group relative rounded-2xl overflow-hidden border-2 ${border} bg-white dark:bg-[#1A1130] p-5 flex flex-col gap-3 text-left card-hover`}
+                className={`group relative rounded-2xl overflow-hidden border border-white/10 bg-white/[0.03] p-5 flex flex-col gap-3 text-left card-hover hover:border-purple-500/40`}
               >
                 <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-0 group-hover:opacity-8 transition-opacity duration-300 pointer-events-none`} />
                 <Icon size={28} className={iconColor} />
                 <div>
-                  <p className="font-bold text-sm text-ink dark:text-cream group-hover:text-saffron dark:group-hover:text-saffron-bright transition-colors">
+                  <p className="font-bold text-sm text-white/80 group-hover:text-saffron transition-colors">
                     {name}
                   </p>
-                  <p className="text-xs text-ink/40 dark:text-cream/40 font-medium mt-0.5">{count} titles</p>
+                  <p className="text-xs text-white/40 font-medium mt-0.5">{count} titles</p>
                 </div>
                 <IconArrowRight size={14} className="text-saffron/0 group-hover:text-saffron dark:group-hover:text-saffron-bright transition-colors absolute bottom-4 right-4" />
               </Link>

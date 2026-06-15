@@ -166,7 +166,7 @@ export default function FeaturedSection() {
   return (
     <section
       id="featured"
-      className="py-20 md:py-28 bg-cream dark:bg-[#0C0818] relative overflow-hidden"
+      className="py-20 md:py-28 bg-[#07080f] relative overflow-hidden"
     >
       <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-gold/8 dark:bg-gold/4 rounded-full blur-3xl pointer-events-none" />
 
@@ -199,7 +199,7 @@ export default function FeaturedSection() {
               className={`flex-shrink-0 flex items-center gap-1.5 px-4 py-1.5 rounded-full text-sm font-semibold transition-all ${
                 i === activeFilter
                   ? "bg-saffron text-white manga-border"
-                  : "bg-parchment dark:bg-[#1A1130] text-ink/70 dark:text-cream/70 border border-saffron/20 dark:border-saffron/15 hover:border-saffron dark:hover:border-saffron-bright hover:text-saffron dark:hover:text-saffron-bright"
+                  : "bg-white/5 text-white/70 border border-purple-500/20 hover:border-saffron hover:text-saffron"
               }`}
             >
               {i === 0 && <IconFlame size={13} />}

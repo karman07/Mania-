@@ -6,9 +6,9 @@ import { useLanguage } from "./LanguageProvider";
 import { IconFlame, IconStar, IconSparkles } from "./Icons";
 
 const CHARACTER_IMAGES = [
-  { src: "/yuji.png",    alt: "Yuji",             accent: "#E8521A", bg: "bg-orange-50 dark:bg-[#1A0E05]", border: "border-orange-300 dark:border-orange-800", manga: "Jujutsu Kaisen", TagIcon: IconFlame  },
-  { src: "/luffy.png",   alt: "Luffy",             accent: "#C4922A", bg: "bg-yellow-50 dark:bg-[#150F00]", border: "border-yellow-300 dark:border-yellow-800", manga: "One Piece",        TagIcon: IconStar   },
-  { src: "/tanjiro.png", alt: "Tanjiro & Nezuko",  accent: "#1A7A4A", bg: "bg-green-50 dark:bg-[#001A0A]",  border: "border-green-300 dark:border-green-800",   manga: "Demon Slayer",     TagIcon: IconSparkles },
+  { src: "/yuji.png",    alt: "Yuji",             accent: "#a855f7", bg: "bg-purple-950/60 dark:bg-[#1A0A2E]", border: "border-purple-700/50 dark:border-purple-800/60", manga: "Jujutsu Kaisen", TagIcon: IconFlame    },
+  { src: "/luffy.png",   alt: "Luffy",             accent: "#7c3aed", bg: "bg-violet-950/60 dark:bg-[#140A2A]", border: "border-violet-700/50 dark:border-violet-800/60", manga: "One Piece",        TagIcon: IconStar     },
+  { src: "/tanjiro.png", alt: "Tanjiro & Nezuko",  accent: "#9333ea", bg: "bg-fuchsia-950/60 dark:bg-[#1A0825]", border: "border-fuchsia-700/50 dark:border-fuchsia-800/60", manga: "Demon Slayer",  TagIcon: IconSparkles },
 ];
 
 export default function CharacterShowcase() {
@@ -18,7 +18,7 @@ export default function CharacterShowcase() {
   const chars = t.chars.list.map((c, i) => ({ ...c, ...CHARACTER_IMAGES[i] }));
 
   return (
-    <section id="characters" className="py-20 md:py-28 bg-parchment dark:bg-[#100A20] relative overflow-hidden">
+    <section id="characters" className="py-20 md:py-28 bg-[#0c0918] relative overflow-hidden">
       <div className="absolute inset-0 halftone opacity-50 pointer-events-none" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-saffron/5 dark:bg-saffron/3 blur-3xl pointer-events-none" />
 

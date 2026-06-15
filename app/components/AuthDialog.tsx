@@ -423,7 +423,7 @@ export default function AuthDialog() {
         {/* close button */}
         <button
           onClick={closeDialog}
-          className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full text-ink/30 hover:text-saffron hover:bg-saffron/10 transition-all z-10"
+          className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full text-white/40 hover:text-saffron hover:bg-saffron/10 transition-all z-10"
         >
           <CloseIcon />
         </button>
