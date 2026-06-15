@@ -3,6 +3,8 @@ import { Bangers, Poppins } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "@/app/components/ThemeProvider";
 import LanguageProvider from "@/app/components/LanguageProvider";
+import AuthProvider from "@/app/components/AuthProvider";
+import AuthDialog from "@/app/components/AuthDialog";
 
 const bangers = Bangers({
   weight: "400",
@@ -43,7 +45,12 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen font-body antialiased">
         <ThemeProvider>
-          <LanguageProvider>{children}</LanguageProvider>
+          <LanguageProvider>
+            <AuthProvider>
+              {children}
+              <AuthDialog />
+            </AuthProvider>
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

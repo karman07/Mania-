@@ -63,7 +63,7 @@ const en: T = {
     trending: "Trending", free: "FREE", ratingLabel: "Rating",
   },
   free: {
-    tag: "No Login Required", h1: "100+ Free Manga", h2: "Awaits You!",
+    tag: "Free to Read", h1: "100+ Free Manga", h2: "Awaits You!",
     body: "Jump straight in — no subscription, no credit card. Dozens of titles from creators worldwide, completely free.",
     cta1: "Browse Free Manga", cta2: "Watch Trailers",
     s1n: "100+", s1l: "Free titles", s2n: "Daily", s2l: "New chapters", s3n: "HD", s3l: "Quality art",
@@ -86,7 +86,7 @@ const en: T = {
   genres: {
     eyebrow: "Find Your Vibe", h1: "Explore by", h2: "Genre",
     sub: "From legendary epics to cozy slice-of-life — there is a genre for every mood.",
-    names: ["Action", "Romance", "Mythology", "Comedy", "Fantasy", "Horror", "Slice of Life", "Historical"],
+    names: ["Action", "Romance", "Fantasy", "Horror", "Comedy", "Slice of Life", "Sci-Fi", "Historical"],
   },
   stats: {
     eyebrow: "By the Numbers", h1: "The World's Manga", h2: "Destination",
@@ -126,7 +126,7 @@ const ja: T = {
     trending: "トレンド", free: "無料", ratingLabel: "評価",
   },
   free: {
-    tag: "ログイン不要", h1: "100以上の無料マンガが", h2: "待っています！",
+    tag: "無料で読む", h1: "100以上の無料マンガが", h2: "待っています！",
     body: "サブスク不要・カード不要。世界中のクリエイターの多くのタイトルが完全無料。",
     cta1: "無料マンガを見る", cta2: "トレーラーを見る",
     s1n: "100+", s1l: "無料タイトル", s2n: "毎日", s2l: "新しいチャプター", s3n: "HD", s3l: "高品質アート",
@@ -149,7 +149,7 @@ const ja: T = {
   genres: {
     eyebrow: "ジャンルを探す", h1: "ジャンル別", h2: "探索",
     sub: "伝説的な叙事詩からのほほんとした日常系まで — どんな気分にも合うジャンルがある。",
-    names: ["アクション","ロマンス","神話","コメディ","ファンタジー","ホラー","日常系","歴史"],
+    names: ["アクション","ロマンス","ファンタジー","ホラー","コメディ","日常系","SF","歴史"],
   },
   stats: {
     eyebrow: "数字で見る", h1: "世界のマンガの", h2: "目的地",
@@ -189,7 +189,7 @@ const ko: T = {
     trending: "트렌딩", free: "무료", ratingLabel: "평점",
   },
   free: {
-    tag: "로그인 불필요", h1: "100개 이상의 무료 만화가", h2: "기다리고 있어요!",
+    tag: "무료로 읽기", h1: "100개 이상의 무료 만화가", h2: "기다리고 있어요!",
     body: "바로 시작하세요 — 구독 없음, 신용카드 없음. 전 세계 크리에이터의 수십 개 타이틀이 완전 무료.",
     cta1: "무료 만화 보기", cta2: "트레일러 보기",
     s1n: "100+", s1l: "무료 타이틀", s2n: "매일", s2l: "새 챕터", s3n: "HD", s3l: "고화질 아트",
@@ -212,7 +212,7 @@ const ko: T = {
   genres: {
     eyebrow: "취향 찾기", h1: "장르별", h2: "탐색",
     sub: "전설적인 서사시부터 아늑한 일상물까지 — 모든 기분에 맞는 장르가 있어요.",
-    names: ["액션","로맨스","신화","코미디","판타지","공포","일상","역사"],
+    names: ["액션","로맨스","판타지","공포","코미디","일상","SF","역사"],
   },
   stats: {
     eyebrow: "숫자로 보는", h1: "세계의 만화", h2: "목적지",
@@ -252,7 +252,7 @@ const es: T = {
     trending: "Tendencia", free: "GRATIS", ratingLabel: "Calificación",
   },
   free: {
-    tag: "Sin Registro", h1: "Más de 100 Manga Gratis", h2: "Te Esperan!",
+    tag: "Lectura Gratuita", h1: "Más de 100 Manga Gratis", h2: "Te Esperan!",
     body: "Empieza de inmediato — sin suscripción, sin tarjeta. Decenas de títulos de creadores de todo el mundo, completamente gratis.",
     cta1: "Ver Manga Gratis", cta2: "Ver Tráilers",
     s1n: "100+", s1l: "Títulos gratis", s2n: "Diario", s2l: "Nuevos capítulos", s3n: "HD", s3l: "Arte de calidad",
@@ -275,7 +275,7 @@ const es: T = {
   genres: {
     eyebrow: "Encuentra Tu Estilo", h1: "Explorar por", h2: "Género",
     sub: "Desde épicas legendarias hasta slice-of-life tranquilo — hay un género para cada estado de ánimo.",
-    names: ["Acción","Romance","Mitología","Comedia","Fantasía","Terror","Vida Cotidiana","Histórico"],
+    names: ["Acción","Romance","Fantasía","Terror","Comedia","Vida Cotidiana","Ciencia Ficción","Histórico"],
   },
   stats: {
     eyebrow: "En Números", h1: "El Destino Mundial", h2: "del Manga",
@@ -315,7 +315,7 @@ const fr: T = {
     trending: "Tendance", free: "GRATUIT", ratingLabel: "Note",
   },
   free: {
-    tag: "Sans Inscription", h1: "Plus de 100 Mangas Gratuits", h2: "Vous Attendent!",
+    tag: "Lecture Gratuite", h1: "Plus de 100 Mangas Gratuits", h2: "Vous Attendent!",
     body: "Commencez directement — sans abonnement, sans carte. Des dizaines de titres de créateurs du monde entier, entièrement gratuits.",
     cta1: "Voir Manga Gratuit", cta2: "Voir Bandes-Annonces",
     s1n: "100+", s1l: "Titres gratuits", s2n: "Quotidien", s2l: "Nouveaux chapitres", s3n: "HD", s3l: "Art de qualité",
@@ -338,7 +338,7 @@ const fr: T = {
   genres: {
     eyebrow: "Trouvez Votre Vibe", h1: "Explorer par", h2: "Genre",
     sub: "Des épopées légendaires aux tranches de vie douillettes — il y a un genre pour chaque humeur.",
-    names: ["Action","Romance","Mythologie","Comédie","Fantaisie","Horreur","Tranche de Vie","Historique"],
+    names: ["Action","Romance","Fantaisie","Horreur","Comédie","Tranche de Vie","Science-Fiction","Historique"],
   },
   stats: {
     eyebrow: "En Chiffres", h1: "La Destination Mondiale", h2: "du Manga",
@@ -378,7 +378,7 @@ const hi: T = {
     trending: "ट्रेंडिंग", free: "फ्री", ratingLabel: "रेटिंग",
   },
   free: {
-    tag: "बिना लॉगिन के", h1: "100+ फ्री मंगा", h2: "आपका इंतजार कर रहे हैं!",
+    tag: "मुफ़्त पढ़ें", h1: "100+ फ्री मंगा", h2: "आपका इंतजार कर रहे हैं!",
     body: "सीधे शुरू करें — कोई सब्सक्रिप्शन नहीं, कोई कार्ड नहीं। दुनिया भर के क्रिएटर्स के दर्जनों टाइटल बिल्कुल फ्री।",
     cta1: "फ्री मंगा देखें", cta2: "ट्रेलर देखें",
     s1n: "100+", s1l: "फ्री टाइटल", s2n: "रोज़", s2l: "नए चैप्टर", s3n: "HD", s3l: "उच्च गुणवत्ता आर्ट",
@@ -401,7 +401,7 @@ const hi: T = {
   genres: {
     eyebrow: "अपनी पसंद खोजें", h1: "जॉनर के अनुसार", h2: "एक्सप्लोर करें",
     sub: "पौराणिक महाकाव्यों से लेकर आरामदेह स्लाइस-ऑफ-लाइफ तक — हर मूड के लिए एक जॉनर है।",
-    names: ["एक्शन","रोमांस","पौराणिक","कॉमेडी","फंतासी","हॉरर","स्लाइस ऑफ लाइफ","ऐतिहासिक"],
+    names: ["एक्शन","रोमांस","फंतासी","हॉरर","कॉमेडी","स्लाइस ऑफ लाइफ","साइ-फाई","ऐतिहासिक"],
   },
   stats: {
     eyebrow: "आंकड़ों में", h1: "दुनिया का मंगा", h2: "डेस्टिनेशन",

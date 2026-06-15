@@ -1,12 +1,15 @@
 "use client";
 
+import Link from "next/link";
 import { useLanguage } from "./LanguageProvider";
+import { useAuth } from "./AuthProvider";
 import { IconBook, IconPencil, IconUsers, IconGift, IconArrowRight } from "./Icons";
 
 const STAT_ICONS = [IconBook, IconPencil, IconUsers, IconGift];
 
 export default function StatsSection() {
   const { t } = useLanguage();
+  const { user, openDialog } = useAuth();
 
   return (
     <section className="py-20 md:py-28 relative overflow-hidden bg-ink dark:bg-[#07040F]">
@@ -51,22 +54,27 @@ export default function StatsSection() {
           })}
         </div>
 
-        {/* CTA */}
-        <div className="mt-16 rounded-2xl bg-gradient-to-r from-saffron via-saffron/90 to-gold p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 manga-border">
-          <div>
-            <h3 className="font-display text-4xl text-white tracking-wider">{t.stats.ctaH}</h3>
-            <p className="text-white/80 text-sm mt-1">{t.stats.ctaB}</p>
+        {/* CTA — only for guests */}
+        {!user && (
+          <div className="mt-16 rounded-2xl bg-gradient-to-r from-saffron via-saffron/90 to-gold p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 manga-border">
+            <div>
+              <h3 className="font-display text-4xl text-white tracking-wider">{t.stats.ctaH}</h3>
+              <p className="text-white/80 text-sm mt-1">{t.stats.ctaB}</p>
+            </div>
+            <div className="flex flex-wrap gap-3 flex-shrink-0">
+              <button
+                onClick={openDialog}
+                className="flex items-center gap-2 px-6 py-3 rounded-full bg-white text-saffron font-bold text-sm hover:bg-cream transition-all hover:scale-105 active:scale-95 manga-border"
+              >
+                {t.stats.cta1}
+                <IconArrowRight size={14} />
+              </button>
+              <Link href="/browse" className="px-6 py-3 rounded-full border-2 border-white/50 text-white font-semibold text-sm hover:border-white hover:bg-white/10 transition-all">
+                {t.stats.cta2}
+              </Link>
+            </div>
           </div>
-          <div className="flex flex-wrap gap-3 flex-shrink-0">
-            <a href="#" className="flex items-center gap-2 px-6 py-3 rounded-full bg-white text-saffron font-bold text-sm hover:bg-cream transition-all hover:scale-105 active:scale-95 manga-border">
-              {t.stats.cta1}
-              <IconArrowRight size={14} />
-            </a>
-            <a href="#featured" className="px-6 py-3 rounded-full border-2 border-white/50 text-white font-semibold text-sm hover:border-white hover:bg-white/10 transition-all">
-              {t.stats.cta2}
-            </a>
-          </div>
-        </div>
+        )}
       </div>
     </section>
   );

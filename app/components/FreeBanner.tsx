@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useLanguage } from "./LanguageProvider";
 import { IconBook, IconPlay, IconGift } from "./Icons";
 
@@ -42,17 +43,20 @@ export default function FreeBanner() {
                 {t.free.body}
               </p>
               <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-                <a
-                  href="#featured"
+                <Link
+                  href="/browse?free=true"
                   className="flex items-center gap-2 px-6 py-3 rounded-full bg-white text-saffron font-bold text-sm manga-border hover:bg-cream transition-all hover:scale-105 active:scale-95"
                 >
                   {t.free.cta1}
                   <span className="text-base leading-none">→</span>
-                </a>
-                <button className="flex items-center gap-2 px-5 py-3 rounded-full border-2 border-white/40 text-white text-sm font-semibold hover:border-white/70 transition-all">
+                </Link>
+                <Link
+                  href="/browse"
+                  className="flex items-center gap-2 px-5 py-3 rounded-full border-2 border-white/40 text-white text-sm font-semibold hover:border-white/70 transition-all"
+                >
                   <IconPlay size={14} />
                   {t.free.cta2}
-                </button>
+                </Link>
               </div>
               <div className="flex gap-6 justify-center lg:justify-start">
                 {[
@@ -89,7 +93,7 @@ export default function FreeBanner() {
             {Array.from({ length: 16 }).map((_, i) => (
               <span key={i} className="flex items-center gap-2">
                 <span className="w-1 h-1 rotate-45 bg-white/40 inline-block" />
-                READ NOW
+                New Chapters Daily
               </span>
             ))}
           </div>

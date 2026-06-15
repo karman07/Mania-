@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { IndiaFlag, IconGlobe, IconStar, IconGift } from "./Icons";
 
 type MangaItem = {
@@ -6,9 +7,17 @@ type MangaItem = {
   origin: "Indian" | "International"
 };
 
-export default function MangaCard({ manga, readNow = "Read Now" }: { manga: MangaItem; readNow?: string }) {
+export default function MangaCard({
+  manga,
+  readNow = "Read Now",
+  href = "/browse",
+}: {
+  manga: MangaItem;
+  readNow?: string;
+  href?: string;
+}) {
   return (
-    <div className="group relative flex flex-col card-hover cursor-pointer">
+    <Link href={href} className="group relative flex flex-col card-hover cursor-pointer">
       <div className={`relative rounded-xl overflow-hidden aspect-[2/3] manga-border ${manga.gradient} flex items-end justify-start p-4`}>
         <div className="absolute inset-0 halftone opacity-40 pointer-events-none" />
         <span className="absolute inset-0 flex items-center justify-center font-display text-[7rem] leading-none opacity-10 select-none pointer-events-none text-white">
@@ -34,9 +43,9 @@ export default function MangaCard({ manga, readNow = "Read Now" }: { manga: Mang
         </div>
 
         <div className="absolute inset-0 bg-ink/0 group-hover:bg-ink/50 transition-all duration-300 flex items-center justify-center">
-          <button className="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 px-4 py-2 rounded-full bg-saffron text-white font-bold text-sm manga-border">
+          <span className="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 px-4 py-2 rounded-full bg-saffron text-white font-bold text-sm manga-border">
             {readNow}
-          </button>
+          </span>
         </div>
       </div>
 
@@ -56,7 +65,7 @@ export default function MangaCard({ manga, readNow = "Read Now" }: { manga: Mang
         </div>
         <p className="text-[10px] text-ink/40 dark:text-cream/40">{manga.chapters} ch.</p>
       </div>
-    </div>
+    </Link>
   );
 }
 

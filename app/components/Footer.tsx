@@ -10,6 +10,14 @@ const SOCIALS = [
   { label: "YouTube",     Icon: IconYoutube   },
 ];
 
+/* Map specific link labels to their routes */
+const LINK_ROUTES: Record<string, string> = {
+  "Terms of Service": "/terms",
+  "Privacy Policy":   "/privacy",
+  "Become a Creator": "/creator/onboard",
+  "Creator Portal":   "/creator/portal",
+};
+
 export default function Footer() {
   const { t } = useLanguage();
 
@@ -58,7 +66,10 @@ export default function Footer() {
               <ul className="flex flex-col gap-2.5">
                 {links.map((item) => (
                   <li key={item}>
-                    <a href="#" className="text-sm text-cream/50 hover:text-saffron dark:hover:text-saffron-bright transition-colors">
+                    <a
+                      href={LINK_ROUTES[item] ?? "#"}
+                      className="text-sm text-cream/50 hover:text-saffron dark:hover:text-saffron-bright transition-colors"
+                    >
                       {item}
                     </a>
                   </li>
@@ -71,10 +82,14 @@ export default function Footer() {
         {/* Bottom */}
         <div className="mt-14 pt-6 border-t border-white/8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-cream/30">{t.footer.copy}</p>
-          <p className="text-xs text-cream/30 flex items-center gap-1.5">
-            <IconHeart size={12} filled className="text-red-400" />
-            {t.footer.madeWith}
-          </p>
+          <div className="flex items-center gap-4 text-xs text-cream/30">
+            <a href="/terms"   className="hover:text-saffron transition-colors">Terms</a>
+            <a href="/privacy" className="hover:text-saffron transition-colors">Privacy</a>
+            <span className="flex items-center gap-1.5">
+              <IconHeart size={12} filled className="text-red-400" />
+              {t.footer.madeWith}
+            </span>
+          </div>
         </div>
       </div>
     </footer>

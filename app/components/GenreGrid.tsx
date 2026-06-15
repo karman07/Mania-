@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useLanguage } from "./LanguageProvider";
 import {
   IconSword, IconHeart, IconSparkles, IconSmile,
@@ -7,14 +8,14 @@ import {
 } from "./Icons";
 
 const GENRE_META = [
-  { Icon: IconSword,    color: "from-red-500 to-orange-600",   iconColor: "text-red-500 dark:text-red-400",      border: "border-red-200 dark:border-red-900/60",      count: "1.2K+" },
-  { Icon: IconHeart,    color: "from-pink-500 to-rose-600",    iconColor: "text-pink-500 dark:text-pink-400",    border: "border-pink-200 dark:border-pink-900/60",    count: "840+"  },
-  { Icon: IconSparkles, color: "from-orange-400 to-amber-600", iconColor: "text-amber-500 dark:text-amber-400",  border: "border-amber-200 dark:border-amber-900/60",  count: "620+"  },
-  { Icon: IconSmile,    color: "from-yellow-400 to-lime-500",  iconColor: "text-yellow-500 dark:text-yellow-400",border: "border-yellow-200 dark:border-yellow-900/60",count: "530+"  },
-  { Icon: IconWand,     color: "from-violet-500 to-purple-700",iconColor: "text-violet-500 dark:text-violet-400",border: "border-violet-200 dark:border-violet-900/60",count: "970+"  },
-  { Icon: IconShield,   color: "from-gray-600 to-slate-800",   iconColor: "text-slate-500 dark:text-slate-400",  border: "border-gray-300 dark:border-gray-700/60",    count: "340+"  },
-  { Icon: IconCoffee,   color: "from-amber-400 to-yellow-600", iconColor: "text-amber-600 dark:text-amber-400",  border: "border-amber-200 dark:border-amber-900/60",  count: "460+"  },
-  { Icon: IconLandmark, color: "from-blue-500 to-indigo-700",  iconColor: "text-blue-500 dark:text-blue-400",    border: "border-blue-200 dark:border-blue-900/60",    count: "280+"  },
+  { Icon: IconSword,    color: "from-red-500 to-orange-600",   iconColor: "text-red-500 dark:text-red-400",      border: "border-red-200 dark:border-red-900/60",      count: "1.2K+", slug: "Action"        },
+  { Icon: IconHeart,    color: "from-pink-500 to-rose-600",    iconColor: "text-pink-500 dark:text-pink-400",    border: "border-pink-200 dark:border-pink-900/60",    count: "840+",  slug: "Romance"       },
+  { Icon: IconWand,     color: "from-violet-500 to-purple-700",iconColor: "text-violet-500 dark:text-violet-400",border: "border-violet-200 dark:border-violet-900/60",count: "970+",  slug: "Fantasy"       },
+  { Icon: IconShield,   color: "from-gray-600 to-slate-800",   iconColor: "text-slate-500 dark:text-slate-400",  border: "border-gray-300 dark:border-gray-700/60",    count: "340+",  slug: "Horror"        },
+  { Icon: IconSmile,    color: "from-yellow-400 to-lime-500",  iconColor: "text-yellow-500 dark:text-yellow-400",border: "border-yellow-200 dark:border-yellow-900/60",count: "530+",  slug: "Comedy"        },
+  { Icon: IconCoffee,   color: "from-amber-400 to-yellow-600", iconColor: "text-amber-600 dark:text-amber-400",  border: "border-amber-200 dark:border-amber-900/60",  count: "460+",  slug: "Slice of Life" },
+  { Icon: IconSparkles, color: "from-blue-500 to-indigo-700",  iconColor: "text-blue-500 dark:text-blue-400",    border: "border-blue-200 dark:border-blue-900/60",    count: "620+",  slug: "Sci-Fi"        },
+  { Icon: IconLandmark, color: "from-orange-400 to-amber-600", iconColor: "text-amber-600 dark:text-amber-400",  border: "border-amber-200 dark:border-amber-900/60",  count: "280+",  slug: "Historical"    },
 ];
 
 export default function GenreGrid() {
@@ -42,10 +43,11 @@ export default function GenreGrid() {
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-5">
           {t.genres.names.map((name, i) => {
-            const { Icon, color, iconColor, border, count } = GENRE_META[i];
+            const { Icon, color, iconColor, border, count, slug } = GENRE_META[i];
             return (
-              <button
+              <Link
                 key={i}
+                href={`/browse?genre=${slug}`}
                 className={`group relative rounded-2xl overflow-hidden border-2 ${border} bg-white dark:bg-[#1A1130] p-5 flex flex-col gap-3 text-left card-hover`}
               >
                 <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-0 group-hover:opacity-8 transition-opacity duration-300 pointer-events-none`} />
@@ -57,7 +59,7 @@ export default function GenreGrid() {
                   <p className="text-xs text-ink/40 dark:text-cream/40 font-medium mt-0.5">{count} titles</p>
                 </div>
                 <IconArrowRight size={14} className="text-saffron/0 group-hover:text-saffron dark:group-hover:text-saffron-bright transition-colors absolute bottom-4 right-4" />
-              </button>
+              </Link>
             );
           })}
         </div>
