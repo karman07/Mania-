@@ -127,6 +127,69 @@ function FeaturedCard({ manga }: { manga: MangaListItem }) {
   );
 }
 
+// ─── Fallback placeholder cards (shown when backend returns nothing) ────────────
+const FALLBACK_ITEMS = [
+  { id: "f1", title: "Kurama Chronicles", author: "Ra Manga", genre: "Action", cover: "/kurama.png", badge: "HOT", rating: 4.9 },
+  { id: "f2", title: "Kurama: Dark Rebirth", author: "Ra Manga", genre: "Adventure", cover: "/kurama.png", badge: "TOP", rating: 4.8 },
+  { id: "f3", title: "Kurama: Blade of Dawn", author: "Ra Manga", genre: "Action", cover: "/kurama.png", badge: "NEW", rating: 4.7 },
+  { id: "f4", title: "Kurama Reborn", author: "Ra Manga", genre: "Fantasy", cover: "/kurama.png", badge: "HOT", rating: 4.6 },
+  { id: "f5", title: "Kurama's Legend", author: "Ra Manga", genre: "Action", cover: "/kurama.png", badge: "TOP", rating: 4.5 },
+];
+
+const BADGE_COLORS: Record<string, string> = {
+  HOT: "bg-red-500",
+  NEW: "bg-emerald-500",
+  TOP: "bg-saffron",
+};
+
+function FallbackCard({ item }: { item: typeof FALLBACK_ITEMS[0] }) {
+  return (
+    <div className="group relative flex flex-col cursor-default select-none">
+      <div className="relative rounded-xl overflow-hidden aspect-[2/3] manga-border flex items-end justify-start p-4">
+        <img
+          src={item.cover}
+          alt={item.title}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 halftone opacity-40 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+        <div className="relative z-10 flex flex-col gap-1.5">
+          <span
+            className={`self-start px-2 py-0.5 rounded text-white text-xs font-bold ${
+              BADGE_COLORS[item.badge] ?? "bg-saffron"
+            }`}
+          >
+            {item.badge}
+          </span>
+        </div>
+        {/* "Coming Soon" overlay */}
+        <div className="absolute inset-0 bg-ink/0 group-hover:bg-ink/50 transition-all duration-300 flex items-center justify-center">
+          <span className="opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 px-4 py-2 rounded-full bg-saffron/80 text-white font-bold text-sm manga-border">
+            Coming Soon
+          </span>
+        </div>
+      </div>
+      <div className="mt-3 px-1 flex flex-col gap-1">
+        <h3 className="font-bold text-sm text-ink dark:text-cream leading-snug line-clamp-2 group-hover:text-saffron dark:group-hover:text-saffron-bright transition-colors">
+          {item.title}
+        </h3>
+        <p className="text-xs text-ink/50 dark:text-cream/50">{item.author}</p>
+        <div className="flex items-center justify-between mt-0.5">
+          <span className="px-2 py-0.5 rounded-full bg-saffron/10 dark:bg-saffron/15 text-saffron dark:text-saffron-bright text-[10px] font-semibold">
+            {item.genre}
+          </span>
+          <div className="flex items-center gap-1">
+            <span className="text-gold text-xs">★</span>
+            <span className="text-xs font-semibold text-ink/70 dark:text-cream/70">
+              {item.rating.toFixed(1)}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ─── Main component ────────────────────────────────────────────────────────────
 export default function FeaturedSection() {
   const { t } = useLanguage();
@@ -215,13 +278,6 @@ export default function FeaturedSection() {
               <SkeletonCard key={i} />
             ))}
           </div>
-        ) : error ? (
-          <div className="py-20 flex flex-col items-center gap-3 text-center">
-            <p className="font-display text-3xl text-ink/30 dark:text-cream/30">
-              Could not load manga
-            </p>
-            <p className="text-sm text-ink/40 dark:text-cream/40">{error}</p>
-          </div>
         ) : filtered.length > 0 ? (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 sm:gap-6">
             {filtered.map((m) => (
@@ -229,13 +285,10 @@ export default function FeaturedSection() {
             ))}
           </div>
         ) : (
-          <div className="py-20 flex flex-col items-center gap-3 text-center">
-            <p className="font-display text-3xl text-ink/30 dark:text-cream/30">
-              No titles yet
-            </p>
-            <p className="text-sm text-ink/40 dark:text-cream/40">
-              More coming soon in this genre
-            </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 sm:gap-6">
+            {FALLBACK_ITEMS.map((item) => (
+              <FallbackCard key={item.id} item={item} />
+            ))}
           </div>
         )}
 
