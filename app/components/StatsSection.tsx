@@ -12,7 +12,7 @@ export default function StatsSection() {
   const { user, openDialog } = useAuth();
 
   return (
-    <section className="py-20 md:py-28 relative overflow-hidden bg-[#07040F]">
+    <section className="py-20 md:py-28 relative overflow-hidden bg-ink dark:bg-[#090909]">
       <div className="absolute inset-0 halftone opacity-20 pointer-events-none" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-saffron/15 blur-3xl rounded-full pointer-events-none" />
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -56,7 +56,7 @@ export default function StatsSection() {
 
         {/* CTA — only for guests */}
         {!user && (
-          <div className="mt-16 rounded-2xl bg-gradient-to-r from-saffron via-saffron/90 to-gold p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 manga-border">
+          <div className="mt-16 rounded-2xl bg-gradient-to-r from-[#6B0000] via-saffron to-[#E32929] p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 manga-border">
             <div>
               <h3 className="font-display text-4xl text-white tracking-wider">{t.stats.ctaH}</h3>
               <p className="text-white/80 text-sm mt-1">{t.stats.ctaB}</p>

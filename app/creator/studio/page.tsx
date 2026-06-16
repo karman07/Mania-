@@ -12,7 +12,7 @@ const API = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:4000";
 
 function StatCard({ label, value, sub, accent }: { label: string; value: string | number; sub?: string; accent?: string }) {
   return (
-    <div className="rounded-2xl bg-white dark:bg-[#1A1130] border border-ink/8 dark:border-cream/8 p-5 flex flex-col gap-1 transition-all hover:border-saffron/30 hover:shadow-lg hover:shadow-saffron/5">
+    <div className="rounded-2xl bg-white dark:bg-[#1A1A1A] border border-ink/8 dark:border-cream/8 p-5 flex flex-col gap-1 transition-all hover:border-saffron/30 hover:shadow-lg hover:shadow-saffron/5">
       <span className="text-xs font-bold uppercase tracking-widest text-ink/35 dark:text-cream/35">{label}</span>
       <span className={`font-display text-4xl tracking-widest ${accent ?? "text-ink dark:text-cream"}`}>{value}</span>
       {sub && <span className="text-xs text-ink/40 dark:text-cream/40">{sub}</span>}
@@ -80,7 +80,7 @@ export default function StudioDashboardPage() {
 
       {/* Views chart */}
       {viewsData.length > 0 && (
-        <div className="rounded-2xl bg-white dark:bg-[#1A1130] border border-ink/8 dark:border-cream/8 p-6">
+        <div className="rounded-2xl bg-white dark:bg-[#1A1A1A] border border-ink/8 dark:border-cream/8 p-6">
           <div className="flex items-center justify-between mb-4">
             <h2 className="font-bold text-ink dark:text-cream text-base">Views (last 14 days)</h2>
             <Link href="/creator/studio/analytics" className="text-xs font-semibold text-saffron hover:underline">
@@ -93,7 +93,7 @@ export default function StudioDashboardPage() {
 
       {/* Top manga table */}
       {stats && stats.topManga.length > 0 && (
-        <div className="rounded-2xl bg-white dark:bg-[#1A1130] border border-ink/8 dark:border-cream/8 overflow-hidden">
+        <div className="rounded-2xl bg-white dark:bg-[#1A1A1A] border border-ink/8 dark:border-cream/8 overflow-hidden">
           <div className="flex items-center justify-between px-6 py-4 border-b border-ink/8 dark:border-cream/8">
             <h2 className="font-bold text-ink dark:text-cream text-base">Top Performing Manga</h2>
             <Link href="/creator/studio/manga" className="text-xs font-semibold text-saffron hover:underline">
@@ -127,7 +127,7 @@ export default function StudioDashboardPage() {
       <div className="grid sm:grid-cols-3 gap-4">
         {[
           { href: "/creator/studio/create", icon: "✦", label: "Create New Manga", desc: "Start a brand new series", bg: "from-saffron/20 to-gold/10", border: "border-saffron/30" },
-          { href: "/creator/studio/manga", icon: "📚", label: "Manage My Manga", desc: "Upload chapters, edit details", bg: "from-blue-500/10 to-violet-500/10", border: "border-blue-500/20" },
+          { href: "/creator/studio/manga", icon: "📚", label: "Manage My Manga", desc: "Upload chapters, edit details", bg: "from-red-500/10 to-amber-500/10", border: "border-red-500/20" },
           { href: "/creator/studio/analytics", icon: "📈", label: "Deep Analytics", desc: "Views, ratings, rankings", bg: "from-emerald-500/10 to-jade/10", border: "border-emerald-500/20" },
         ].map(({ href, icon, label, desc, bg, border }) => (
           <Link

@@ -158,7 +158,7 @@ export default function CreatorOnboardPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-cream dark:bg-[#0C0818]">
+      <div className="min-h-screen bg-cream dark:bg-[#0A0A0A]">
         <Navbar />
         <div className="pt-32 flex justify-center">
           <span className="w-8 h-8 rounded-full border-2 border-saffron border-t-transparent animate-spin" />
@@ -169,7 +169,7 @@ export default function CreatorOnboardPage() {
 
   if (!user) {
     return (
-      <div className="min-h-screen bg-cream dark:bg-[#0C0818]">
+      <div className="min-h-screen bg-cream dark:bg-[#0A0A0A]">
         <Navbar />
         <div className="pt-40 flex flex-col items-center gap-5 px-4 text-center">
           <div className="w-16 h-16 rounded-2xl bg-saffron/10 border-2 border-saffron/20 flex items-center justify-center">
@@ -193,7 +193,7 @@ export default function CreatorOnboardPage() {
   const STEPS = ["Your Identity", "Creative Style", "Agreement"];
 
   return (
-    <div className="min-h-screen bg-cream dark:bg-[#0C0818]">
+    <div className="min-h-screen bg-cream dark:bg-[#0A0A0A]">
       <Navbar />
 
       <main className="pt-24 pb-20 px-4">

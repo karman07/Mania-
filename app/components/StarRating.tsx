@@ -63,7 +63,7 @@ export default function StarRating({
               className={`text-3xl transition-all duration-150 ${
                 submitting ? "opacity-50 cursor-wait" : "cursor-pointer hover:scale-125"
               }`}
-              style={{ color: filled ? "#E8521A" : halfFilled ? "#C4922A" : "#1A0A0022" }}
+              style={{ color: filled ? "#C8181E" : halfFilled ? "#B8860B" : "#0D0D0D22" }}
               onMouseEnter={() => !submitting && setHovered(star)}
               onClick={() => handleRate(star)}
             >

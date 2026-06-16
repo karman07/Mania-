@@ -9,7 +9,7 @@ interface ViewsChartProps {
   color?: string;
 }
 
-export default function ViewsChart({ data, height = 160, color = "#E8521A" }: ViewsChartProps) {
+export default function ViewsChart({ data, height = 160, color = "#C8181E" }: ViewsChartProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animRef = useRef<number>(0);
 

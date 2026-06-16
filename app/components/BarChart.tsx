@@ -9,7 +9,7 @@ interface BarChartProps {
   color?: string;
 }
 
-export default function BarChart({ data, height = 180, color = "#E8521A" }: BarChartProps) {
+export default function BarChart({ data, height = 180, color = "#C8181E" }: BarChartProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animRef = useRef<number>(0);
 

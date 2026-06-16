@@ -16,14 +16,14 @@ export default function StudioLayout({ children }: { children: React.ReactNode }
 
   if (loading || !user || user.role !== "creator") {
     return (
-      <div className="min-h-screen bg-cream dark:bg-[#0C0818] flex items-center justify-center">
+      <div className="min-h-screen bg-cream dark:bg-[#0A0A0A] flex items-center justify-center">
         <div className="w-10 h-10 rounded-full border-4 border-saffron border-t-transparent animate-spin" />
       </div>
     );
   }
 
   return (
-    <div className="flex h-screen overflow-hidden bg-cream dark:bg-[#0C0818]">
+    <div className="flex h-screen overflow-hidden bg-cream dark:bg-[#0A0A0A]">
       {/* Desktop sidebar */}
       <div className="hidden md:flex flex-shrink-0 h-full">
         <StudioSidebar />
@@ -32,14 +32,14 @@ export default function StudioLayout({ children }: { children: React.ReactNode }
       {/* Main content */}
       <main className="flex-1 h-full overflow-y-auto">
         {/* Mobile header */}
-        <div className="md:hidden flex items-center justify-between px-4 py-3 border-b border-ink/8 dark:border-cream/8 bg-white dark:bg-[#110B22] sticky top-0 z-30">
+        <div className="md:hidden flex items-center justify-between px-4 py-3 border-b border-ink/8 dark:border-cream/8 bg-white dark:bg-[#131313] sticky top-0 z-30">
           <span className="font-display text-lg gradient-text tracking-widest">RaManga Studio</span>
           <div className="flex items-center gap-2 text-xs font-bold text-saffron uppercase tracking-widest">
             ✦ Creator
           </div>
         </div>
         {/* Mobile nav strip */}
-        <div className="md:hidden flex overflow-x-auto border-b border-ink/8 dark:border-cream/8 bg-white dark:bg-[#110B22] sticky top-[49px] z-20 gap-0.5 px-2 py-1.5">
+        <div className="md:hidden flex overflow-x-auto border-b border-ink/8 dark:border-cream/8 bg-white dark:bg-[#131313] sticky top-[49px] z-20 gap-0.5 px-2 py-1.5">
           {[
             { href: "/creator/studio", label: "Home", icon: "▦" },
             { href: "/creator/studio/manga", label: "Manga", icon: "📚" },

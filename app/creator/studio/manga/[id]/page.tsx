@@ -135,7 +135,7 @@ export default function ManageMangaPage() {
       </div>
 
       {/* Header card */}
-      <div className="rounded-2xl bg-white dark:bg-[#1A1130] border border-ink/8 dark:border-cream/8 p-6 flex flex-col sm:flex-row gap-6">
+      <div className="rounded-2xl bg-white dark:bg-[#1A1A1A] border border-ink/8 dark:border-cream/8 p-6 flex flex-col sm:flex-row gap-6">
         {/* Cover */}
         <div className="flex-shrink-0 flex flex-col items-center gap-3">
           <div
@@ -190,7 +190,7 @@ export default function ManageMangaPage() {
                 id="edit-status"
                 value={editStatus}
                 onChange={(e) => setEditStatus(e.target.value as any)}
-                className="rounded-xl border border-ink/15 dark:border-cream/15 bg-white dark:bg-[#1A1130] px-3 py-2 text-sm text-ink dark:text-cream focus:outline-none focus:border-saffron/50"
+                className="rounded-xl border border-ink/15 dark:border-cream/15 bg-white dark:bg-[#1A1A1A] px-3 py-2 text-sm text-ink dark:text-cream focus:outline-none focus:border-saffron/50"
               >
                 <option value="ongoing">Ongoing</option>
                 <option value="completed">Completed</option>
@@ -238,7 +238,7 @@ export default function ManageMangaPage() {
       </div>
 
       {/* Chapters section */}
-      <div className="rounded-2xl bg-white dark:bg-[#1A1130] border border-ink/8 dark:border-cream/8 overflow-hidden">
+      <div className="rounded-2xl bg-white dark:bg-[#1A1A1A] border border-ink/8 dark:border-cream/8 overflow-hidden">
         <div className="flex items-center justify-between px-6 py-4 border-b border-ink/8 dark:border-cream/8">
           <h2 className="font-bold text-ink dark:text-cream">
             Chapters <span className="text-saffron">({chapters.length})</span>
@@ -264,7 +264,7 @@ export default function ManageMangaPage() {
                 value={chNum}
                 onChange={(e) => setChNum(e.target.value)}
                 placeholder="Chapter #"
-                className="rounded-xl border border-ink/15 dark:border-cream/15 bg-white dark:bg-[#1A1130] px-3 py-2.5 text-sm text-ink dark:text-cream focus:outline-none focus:border-saffron/50"
+                className="rounded-xl border border-ink/15 dark:border-cream/15 bg-white dark:bg-[#1A1A1A] px-3 py-2.5 text-sm text-ink dark:text-cream focus:outline-none focus:border-saffron/50"
               />
               <input
                 id="ch-title-input"
@@ -272,7 +272,7 @@ export default function ManageMangaPage() {
                 value={chTitle}
                 onChange={(e) => setChTitle(e.target.value)}
                 placeholder="Chapter title (optional)"
-                className="rounded-xl border border-ink/15 dark:border-cream/15 bg-white dark:bg-[#1A1130] px-3 py-2.5 text-sm text-ink dark:text-cream focus:outline-none focus:border-saffron/50"
+                className="rounded-xl border border-ink/15 dark:border-cream/15 bg-white dark:bg-[#1A1A1A] px-3 py-2.5 text-sm text-ink dark:text-cream focus:outline-none focus:border-saffron/50"
               />
               <label className="flex items-center gap-2 text-sm text-ink/60 dark:text-cream/60 cursor-pointer">
                 <input type="checkbox" checked={chFree} onChange={(e) => setChFree(e.target.checked)} className="w-4 h-4 accent-saffron" />

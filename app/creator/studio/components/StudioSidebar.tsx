@@ -26,7 +26,7 @@ export default function StudioSidebar() {
     <aside
       className={`flex flex-col h-full transition-all duration-300 ${
         collapsed ? "w-[72px]" : "w-64"
-      } bg-white dark:bg-[#110B22] border-r border-ink/8 dark:border-cream/8`}
+      } bg-white dark:bg-[#131313] border-r border-ink/8 dark:border-cream/8`}
     >
       {/* Logo + collapse toggle */}
       <div className="flex items-center justify-between px-4 py-5 border-b border-ink/8 dark:border-cream/8">

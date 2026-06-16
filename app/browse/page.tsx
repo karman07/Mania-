@@ -235,11 +235,11 @@ function BrowseContent() {
   const hasMore = data ? data.page < data.pages : false;
 
   return (
-    <div className="min-h-screen bg-cream dark:bg-[#0C0818]">
+    <div className="min-h-screen bg-cream dark:bg-[#0A0A0A]">
       <Navbar />
 
       {/* ── page header ── */}
-      <div className="pt-20 border-b border-saffron/10 dark:border-cream/5 bg-cream dark:bg-[#0C0818]">
+      <div className="pt-20 border-b border-saffron/10 dark:border-cream/5 bg-cream dark:bg-[#0A0A0A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           {greetName && (
             <p className="text-xs font-semibold text-saffron uppercase tracking-[0.2em] mb-2">

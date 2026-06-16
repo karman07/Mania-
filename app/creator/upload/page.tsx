@@ -243,7 +243,7 @@ export default function CreatorUploadPage() {
   // ─── Guard: must be logged in ─────────────────────────────────────────────
   if (!user) {
     return (
-      <div className="min-h-screen bg-cream dark:bg-[#0C0818] flex flex-col">
+      <div className="min-h-screen bg-cream dark:bg-[#0A0A0A] flex flex-col">
         <Navbar />
         <div className="flex-1 flex flex-col items-center justify-center gap-6 px-4 text-center">
           <p className="font-display text-4xl text-ink dark:text-cream tracking-wider">
@@ -268,7 +268,7 @@ export default function CreatorUploadPage() {
   if (success) {
     const mangaId = createdManga?._id ?? selectedMangaId;
     return (
-      <div className="min-h-screen bg-cream dark:bg-[#0C0818] flex flex-col">
+      <div className="min-h-screen bg-cream dark:bg-[#0A0A0A] flex flex-col">
         <Navbar />
         <div className="flex-1 flex flex-col items-center justify-center gap-6 px-4 text-center">
           <div className="text-6xl">🎉</div>
@@ -308,7 +308,7 @@ export default function CreatorUploadPage() {
   }
 
   return (
-    <div className="min-h-screen bg-cream dark:bg-[#0C0818]">
+    <div className="min-h-screen bg-cream dark:bg-[#0A0A0A]">
       <Navbar />
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-28">

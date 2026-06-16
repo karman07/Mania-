@@ -43,12 +43,12 @@ async function loadCountries(): Promise<Country[]> {
 const GENRES = [
   { name: "Action",        Icon: IconSword,    sel: "border-red-400/70 bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400" },
   { name: "Romance",       Icon: IconHeart,    sel: "border-pink-400/70 bg-pink-50 dark:bg-pink-900/20 text-pink-600 dark:text-pink-400" },
-  { name: "Fantasy",       Icon: IconWand,     sel: "border-violet-400/70 bg-violet-50 dark:bg-violet-900/20 text-violet-600 dark:text-violet-400" },
+  { name: "Fantasy",       Icon: IconWand,     sel: "border-emerald-500/70 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-400" },
   { name: "Horror",        Icon: IconShield,   sel: "border-gray-400/70 bg-gray-100 dark:bg-gray-800/40 text-gray-700 dark:text-gray-300" },
   { name: "Comedy",        Icon: IconSmile,    sel: "border-yellow-400/70 bg-yellow-50 dark:bg-yellow-900/20 text-yellow-600 dark:text-yellow-400" },
   { name: "Slice of Life", Icon: IconCoffee,   sel: "border-amber-400/70 bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-400" },
   { name: "Sci-Fi",        Icon: IconSparkles, sel: "border-blue-400/70 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400" },
-  { name: "Historical",    Icon: IconLandmark, sel: "border-indigo-400/70 bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-400" },
+  { name: "Historical",    Icon: IconLandmark, sel: "border-amber-500/70 bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-400" },
 ];
 
 /* ─── sub-components ─────────────────── */
@@ -120,7 +120,7 @@ function CountryPicker({
       </button>
 
       {open && (
-        <div className="absolute top-full left-0 right-0 mt-1 rounded-2xl border-2 border-saffron/20 bg-cream dark:bg-[#0C0818] shadow-2xl z-50 overflow-hidden">
+        <div className="absolute top-full left-0 right-0 mt-1 rounded-2xl border-2 border-saffron/20 bg-cream dark:bg-[#0A0A0A] shadow-2xl z-50 overflow-hidden">
           <div className="p-2 border-b border-saffron/10">
             <input
               ref={inputRef}
@@ -289,7 +289,7 @@ export default function ProfilePage() {
 
   if (loading || !user) {
     return (
-      <div className="min-h-screen bg-cream dark:bg-[#0C0818]">
+      <div className="min-h-screen bg-cream dark:bg-[#0A0A0A]">
         <Navbar />
         <div className="pt-32 flex justify-center">
           <span className="w-8 h-8 rounded-full border-2 border-saffron border-t-transparent animate-spin" />
@@ -299,7 +299,7 @@ export default function ProfilePage() {
   }
 
   return (
-    <div className="min-h-screen bg-cream dark:bg-[#0C0818]">
+    <div className="min-h-screen bg-cream dark:bg-[#0A0A0A]">
       <Navbar />
 
       <main className="pt-24 pb-20 px-4">

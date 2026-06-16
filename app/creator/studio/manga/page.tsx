@@ -37,7 +37,7 @@ function MangaRow({ manga, onStatusChange }: { manga: MangaListItem; onStatusCha
   }
 
   return (
-    <div className="group flex items-center gap-4 px-5 py-4 rounded-2xl bg-white dark:bg-[#1A1130] border border-ink/8 dark:border-cream/8 hover:border-saffron/30 transition-all">
+    <div className="group flex items-center gap-4 px-5 py-4 rounded-2xl bg-white dark:bg-[#1A1A1A] border border-ink/8 dark:border-cream/8 hover:border-saffron/30 transition-all">
       {/* Cover */}
       <div className="w-12 aspect-[2/3] rounded-lg overflow-hidden flex-shrink-0 bg-saffron/10">
         {coverUrl ? (
@@ -164,7 +164,7 @@ export default function MyMangaPage() {
             onClick={() => setTab(value)}
             className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
               tab === value
-                ? "bg-white dark:bg-[#1A1130] text-saffron shadow"
+                ? "bg-white dark:bg-[#1A1A1A] text-saffron shadow"
                 : "text-ink/50 dark:text-cream/50 hover:text-saffron"
             }`}
           >

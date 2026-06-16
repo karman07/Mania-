@@ -59,7 +59,7 @@ export default function AnalyticsPage() {
             id="analytics-manga-select"
             value={selectedId}
             onChange={(e) => setSelectedId(e.target.value)}
-            className="rounded-xl border border-ink/15 dark:border-cream/15 bg-white dark:bg-[#1A1130] px-4 py-2.5 text-sm text-ink dark:text-cream focus:outline-none focus:border-saffron/50 min-w-[200px]"
+            className="rounded-xl border border-ink/15 dark:border-cream/15 bg-white dark:bg-[#1A1A1A] px-4 py-2.5 text-sm text-ink dark:text-cream focus:outline-none focus:border-saffron/50 min-w-[200px]"
           >
             {mangaList.map((m) => (
               <option key={m._id} value={m._id}>{m.title}</option>
@@ -88,7 +88,7 @@ export default function AnalyticsPage() {
                 { label: "Ratings Count", value: analytics.ratingCount.toLocaleString() },
                 { label: "Chapters", value: analytics.chapterCount },
               ].map(({ label, value, accent }) => (
-                <div key={label} className="rounded-2xl bg-white dark:bg-[#1A1130] border border-ink/8 dark:border-cream/8 p-5">
+                <div key={label} className="rounded-2xl bg-white dark:bg-[#1A1A1A] border border-ink/8 dark:border-cream/8 p-5">
                   <span className="text-xs font-bold uppercase tracking-widest text-ink/35 dark:text-cream/35 block mb-1">{label}</span>
                   <span className={`font-display text-3xl tracking-wider ${accent ? "gradient-text" : "text-ink dark:text-cream"}`}>{value}</span>
                 </div>
@@ -117,7 +117,7 @@ export default function AnalyticsPage() {
           {loadingStats ? (
             <div className="h-48 rounded-2xl bg-ink/5 dark:bg-cream/5 animate-pulse" />
           ) : analytics && analytics.viewsOverTime.length > 0 ? (
-            <div className="rounded-2xl bg-white dark:bg-[#1A1130] border border-ink/8 dark:border-cream/8 p-6">
+            <div className="rounded-2xl bg-white dark:bg-[#1A1A1A] border border-ink/8 dark:border-cream/8 p-6">
               <h2 className="font-bold text-base text-ink dark:text-cream mb-4">Views Over Time (30 days)</h2>
               <ViewsChart data={analytics.viewsOverTime} height={180} />
             </div>
@@ -125,7 +125,7 @@ export default function AnalyticsPage() {
 
           {/* Chapter performance */}
           {analytics && analytics.chapters.length > 0 && (
-            <div className="rounded-2xl bg-white dark:bg-[#1A1130] border border-ink/8 dark:border-cream/8 p-6">
+            <div className="rounded-2xl bg-white dark:bg-[#1A1A1A] border border-ink/8 dark:border-cream/8 p-6">
               <h2 className="font-bold text-base text-ink dark:text-cream mb-4">Views per Chapter</h2>
               <BarChart data={analytics.chapters} height={200} />
 

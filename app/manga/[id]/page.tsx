@@ -70,7 +70,7 @@ export default function MangaDetailPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-cream dark:bg-[#0C0818]">
+      <div className="min-h-screen bg-cream dark:bg-[#0A0A0A]">
         <Navbar />
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16">
           <div className="flex flex-col md:flex-row gap-10">
@@ -92,7 +92,7 @@ export default function MangaDetailPage() {
 
   if (error || !manga) {
     return (
-      <div className="min-h-screen bg-cream dark:bg-[#0C0818] flex flex-col">
+      <div className="min-h-screen bg-cream dark:bg-[#0A0A0A] flex flex-col">
         <Navbar />
         <div className="flex-1 flex flex-col items-center justify-center gap-4">
           <p className="font-display text-4xl text-ink/20 dark:text-cream/20">
@@ -111,7 +111,7 @@ export default function MangaDetailPage() {
   }
 
   return (
-    <div className="min-h-screen bg-cream dark:bg-[#0C0818]">
+    <div className="min-h-screen bg-cream dark:bg-[#0A0A0A]">
       <Navbar />
 
       {/* ── Hero banner ── */}
@@ -128,7 +128,7 @@ export default function MangaDetailPage() {
             style={{ backgroundImage: `url(${coverUrl})` }}
           />
         )}
-        <div className="absolute inset-0 bg-cream/80 dark:bg-[#0C0818]/85 pointer-events-none" />
+        <div className="absolute inset-0 bg-cream/80 dark:bg-[#0A0A0A]/85 pointer-events-none" />
 
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start">

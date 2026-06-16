@@ -56,9 +56,9 @@ const BENEFITS = [
     Icon: IconTrendingUp,
     title: "Analytics & Growth",
     body: "Track reads, retention, fan comments, and revenue — all in your creator dashboard.",
-    color: "text-violet-500 dark:text-violet-400",
-    bg: "bg-violet-50 dark:bg-violet-900/20",
-    border: "border-violet-100 dark:border-violet-800/30",
+    color: "text-emerald-600 dark:text-emerald-400",
+    bg: "bg-emerald-50 dark:bg-emerald-900/20",
+    border: "border-emerald-100 dark:border-emerald-800/30",
   },
 ];
 
@@ -78,7 +78,7 @@ const FAQS = [
 /* ── creator card ─────────────────────────── */
 function CreatorCard({ creator }: { creator: Creator }) {
   return (
-    <div className="group rounded-2xl bg-white dark:bg-[#1A1130] border-2 border-ink/5 dark:border-cream/5 hover:border-saffron/30 dark:hover:border-saffron/20 p-5 flex gap-4 transition-all card-hover">
+    <div className="group rounded-2xl bg-white dark:bg-[#1A1A1A] border-2 border-ink/5 dark:border-cream/5 hover:border-saffron/30 dark:hover:border-saffron/20 p-5 flex gap-4 transition-all card-hover">
       <div className="w-14 h-14 rounded-xl flex-shrink-0 overflow-hidden border-2 border-saffron/20 bg-saffron/5">
         <Image
           src="/writer_image.png"
@@ -118,11 +118,11 @@ export default function CreatorsPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-cream dark:bg-[#0C0818]">
+    <div className="min-h-screen bg-cream dark:bg-[#0A0A0A]">
       <Navbar />
 
       {/* ── Hero ──────────────────────────────────── */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-ink dark:bg-[#07040F] pt-20">
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-ink dark:bg-[#090909] pt-20">
         <div className="absolute inset-0 halftone opacity-25 pointer-events-none" />
         <div className="absolute inset-0 speed-lines pointer-events-none opacity-30" />
         <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-saffron/10 blur-3xl pointer-events-none" />
@@ -215,7 +215,7 @@ export default function CreatorsPage() {
       </section>
 
       {/* ── Benefits ─────────────────────────────── */}
-      <section className="py-20 md:py-28 bg-cream dark:bg-[#0C0818]">
+      <section className="py-20 md:py-28 bg-cream dark:bg-[#0A0A0A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <p className="text-xs font-bold text-saffron dark:text-saffron-bright uppercase tracking-[0.2em] mb-3 flex items-center justify-center gap-2">
@@ -263,7 +263,7 @@ export default function CreatorsPage() {
           <div className="grid md:grid-cols-3 gap-6">
             {STEPS.map(({ n, title, body }) => (
               <div key={n} className="flex flex-col items-center text-center gap-4">
-                <div className="w-20 h-20 rounded-2xl bg-white dark:bg-[#1A1130] manga-border flex items-center justify-center flex-shrink-0 shadow-lg">
+                <div className="w-20 h-20 rounded-2xl bg-white dark:bg-[#1A1A1A] manga-border flex items-center justify-center flex-shrink-0 shadow-lg">
                   <span className="font-display text-4xl gradient-text leading-none">{n}</span>
                 </div>
                 <div>
@@ -292,7 +292,7 @@ export default function CreatorsPage() {
       </section>
 
       {/* ── Creators Grid ────────────────────────── */}
-      <section id="creators" className="py-20 md:py-28 bg-cream dark:bg-[#0C0818]">
+      <section id="creators" className="py-20 md:py-28 bg-cream dark:bg-[#0A0A0A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
             <div>
@@ -312,7 +312,7 @@ export default function CreatorsPage() {
           {fetchLoading ? (
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {Array.from({ length: 6 }).map((_, i) => (
-                <div key={i} className="rounded-2xl bg-white dark:bg-[#1A1130] border-2 border-ink/5 dark:border-cream/5 p-5 flex gap-4 animate-pulse">
+                <div key={i} className="rounded-2xl bg-white dark:bg-[#1A1A1A] border-2 border-ink/5 dark:border-cream/5 p-5 flex gap-4 animate-pulse">
                   <div className="w-14 h-14 rounded-xl bg-ink/5 dark:bg-cream/5 flex-shrink-0" />
                   <div className="flex-1 flex flex-col gap-2 pt-1">
                     <div className="h-3 w-28 bg-ink/8 dark:bg-cream/8 rounded" />
@@ -358,7 +358,7 @@ export default function CreatorsPage() {
           </div>
           <div className="flex flex-col gap-4">
             {FAQS.map(({ q, a }) => (
-              <div key={q} className="rounded-2xl bg-white dark:bg-[#1A1130] border-2 border-ink/5 dark:border-cream/5 p-6">
+              <div key={q} className="rounded-2xl bg-white dark:bg-[#1A1A1A] border-2 border-ink/5 dark:border-cream/5 p-6">
                 <p className="font-bold text-sm text-ink dark:text-cream mb-2">{q}</p>
                 <p className="text-sm text-ink/55 dark:text-cream/55 leading-relaxed">{a}</p>
               </div>
@@ -368,7 +368,7 @@ export default function CreatorsPage() {
       </section>
 
       {/* ── Final CTA ────────────────────────────── */}
-      <section className="py-20 md:py-28 bg-cream dark:bg-[#0C0818]">
+      <section className="py-20 md:py-28 bg-cream dark:bg-[#0A0A0A]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <div className="rounded-3xl bg-gradient-to-br from-saffron via-saffron/90 to-gold p-10 md:p-14 manga-border relative overflow-hidden">
             <div className="absolute inset-0 halftone opacity-20 pointer-events-none" />

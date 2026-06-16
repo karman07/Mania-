@@ -71,7 +71,7 @@ export default function TermsPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-cream dark:bg-[#0C0818]">
+    <div className="min-h-screen bg-cream dark:bg-[#0A0A0A]">
       <Navbar />
 
       {/* hero strip */}

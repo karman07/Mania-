@@ -18,13 +18,15 @@ export default function ThemeProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const [theme, setTheme] = useState<Theme>("dark");
+  const [theme, setTheme] = useState<Theme>("light");
 
   useEffect(() => {
     const stored = localStorage.getItem("ramanga-theme") as Theme | null;
-    const initial: Theme = stored === "light" ? "light" : "dark";
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+    const initial = stored ?? (prefersDark ? "dark" : "light");
     setTheme(initial);
-    document.documentElement.classList.toggle("dark", initial === "dark");
   }, []);
 
   function toggleTheme() {

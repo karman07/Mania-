@@ -166,7 +166,7 @@ export default function CreateMangaPage() {
 
       {/* ── Step 1: Metadata ── */}
       {step === 1 && (
-        <div className="rounded-2xl bg-white dark:bg-[#1A1130] border border-ink/8 dark:border-cream/8 p-6 space-y-5">
+        <div className="rounded-2xl bg-white dark:bg-[#1A1A1A] border border-ink/8 dark:border-cream/8 p-6 space-y-5">
           <h2 className="font-bold text-lg text-ink dark:text-cream">Series Details</h2>
 
           <div className="space-y-3">
@@ -229,7 +229,7 @@ export default function CreateMangaPage() {
               <div>
                 <label className="text-xs font-bold uppercase tracking-widest text-ink/40 dark:text-cream/40 mb-1 block">Series Status</label>
                 <select id="manga-status-select" value={status} onChange={(e) => setStatus(e.target.value as any)}
-                  className="w-full rounded-xl border border-ink/15 dark:border-cream/15 bg-white dark:bg-[#1A1130] px-3 py-2.5 text-sm text-ink dark:text-cream focus:outline-none focus:border-saffron/50">
+                  className="w-full rounded-xl border border-ink/15 dark:border-cream/15 bg-white dark:bg-[#1A1A1A] px-3 py-2.5 text-sm text-ink dark:text-cream focus:outline-none focus:border-saffron/50">
                   <option value="ongoing">Ongoing</option>
                   <option value="completed">Completed</option>
                   <option value="hiatus">Hiatus</option>
@@ -238,7 +238,7 @@ export default function CreateMangaPage() {
               <div>
                 <label className="text-xs font-bold uppercase tracking-widest text-ink/40 dark:text-cream/40 mb-1 block">Origin</label>
                 <select id="manga-origin-select" value={origin} onChange={(e) => setOrigin(e.target.value as any)}
-                  className="w-full rounded-xl border border-ink/15 dark:border-cream/15 bg-white dark:bg-[#1A1130] px-3 py-2.5 text-sm text-ink dark:text-cream focus:outline-none focus:border-saffron/50">
+                  className="w-full rounded-xl border border-ink/15 dark:border-cream/15 bg-white dark:bg-[#1A1A1A] px-3 py-2.5 text-sm text-ink dark:text-cream focus:outline-none focus:border-saffron/50">
                   <option value="Indian">Indian</option>
                   <option value="International">International</option>
                 </select>
@@ -246,7 +246,7 @@ export default function CreateMangaPage() {
               <div>
                 <label className="text-xs font-bold uppercase tracking-widest text-ink/40 dark:text-cream/40 mb-1 block">Age Rating</label>
                 <select id="manga-age-select" value={ageRating} onChange={(e) => setAgeRating(e.target.value as any)}
-                  className="w-full rounded-xl border border-ink/15 dark:border-cream/15 bg-white dark:bg-[#1A1130] px-3 py-2.5 text-sm text-ink dark:text-cream focus:outline-none focus:border-saffron/50">
+                  className="w-full rounded-xl border border-ink/15 dark:border-cream/15 bg-white dark:bg-[#1A1A1A] px-3 py-2.5 text-sm text-ink dark:text-cream focus:outline-none focus:border-saffron/50">
                   <option value="all">All Ages</option>
                   <option value="teen">Teen</option>
                   <option value="mature">Mature</option>
@@ -255,7 +255,7 @@ export default function CreateMangaPage() {
               <div>
                 <label className="text-xs font-bold uppercase tracking-widest text-ink/40 dark:text-cream/40 mb-1 block">Badge</label>
                 <select id="manga-badge-select" value={badge ?? ""} onChange={(e) => setBadge((e.target.value || null) as any)}
-                  className="w-full rounded-xl border border-ink/15 dark:border-cream/15 bg-white dark:bg-[#1A1130] px-3 py-2.5 text-sm text-ink dark:text-cream focus:outline-none focus:border-saffron/50">
+                  className="w-full rounded-xl border border-ink/15 dark:border-cream/15 bg-white dark:bg-[#1A1A1A] px-3 py-2.5 text-sm text-ink dark:text-cream focus:outline-none focus:border-saffron/50">
                   <option value="">None</option>
                   <option value="HOT">HOT</option>
                   <option value="NEW">NEW</option>
@@ -288,7 +288,7 @@ export default function CreateMangaPage() {
 
       {/* ── Step 2: Cover ── */}
       {step === 2 && (
-        <div className="rounded-2xl bg-white dark:bg-[#1A1130] border border-ink/8 dark:border-cream/8 p-6 space-y-5">
+        <div className="rounded-2xl bg-white dark:bg-[#1A1A1A] border border-ink/8 dark:border-cream/8 p-6 space-y-5">
           <h2 className="font-bold text-lg text-ink dark:text-cream">Cover Image</h2>
           <p className="text-sm text-ink/50 dark:text-cream/50">Add a striking cover image for your manga. You can skip this and add it later.</p>
 
@@ -342,7 +342,7 @@ export default function CreateMangaPage() {
 
       {/* ── Step 3: Excalidraw ── */}
       {step === 3 && (
-        <div className="rounded-2xl bg-white dark:bg-[#1A1130] border border-ink/8 dark:border-cream/8 p-6 space-y-5">
+        <div className="rounded-2xl bg-white dark:bg-[#1A1A1A] border border-ink/8 dark:border-cream/8 p-6 space-y-5">
           <div className="flex items-start justify-between gap-4">
             <div>
               <h2 className="font-bold text-lg text-ink dark:text-cream">Draw Chapter 1</h2>
@@ -396,7 +396,7 @@ export default function CreateMangaPage() {
 
       {/* ── Step 4: Done ── */}
       {step === 4 && (
-        <div className="rounded-2xl bg-white dark:bg-[#1A1130] border border-ink/8 dark:border-cream/8 p-10 text-center space-y-6">
+        <div className="rounded-2xl bg-white dark:bg-[#1A1A1A] border border-ink/8 dark:border-cream/8 p-10 text-center space-y-6">
           <div className="text-6xl">🎉</div>
           <h2 className="font-display text-4xl text-ink dark:text-cream tracking-wider">
             Your manga is <span className="gradient-text">live!</span>

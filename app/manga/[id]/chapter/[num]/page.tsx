@@ -217,7 +217,7 @@ export default function ChapterReaderPage() {
         </div>
 
         {/* ── Chapter comments ── */}
-        <div className="bg-cream dark:bg-[#0C0818] border-t border-white/8">
+        <div className="bg-cream dark:bg-[#0A0A0A] border-t border-white/8">
           <div className="max-w-3xl mx-auto px-4 py-10">
             <CommentsSection
               mangaId={mangaId}
